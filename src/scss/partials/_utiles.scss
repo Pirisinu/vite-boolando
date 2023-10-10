@@ -1,0 +1,38 @@
+@use './variabiles' as *;
+
+/* UTILS */
+
+.d-flex{
+  display: flex;
+}
+
+.flex-wrap{
+  flex-wrap: wrap;
+}
+
+.justify-content-center{
+  justify-content: center;
+}
+
+.justify-content-beetween{
+  justify-content: space-between;
+}
+
+.align-center{
+  align-items: center;
+}
+
+.h-100{
+  height: 100%;
+}
+
+.debug{
+  min-height: 200px;
+  border: 1px solid black;
+  background-color: rgba(255, 0, 0, .2);
+}
+.container{
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+}

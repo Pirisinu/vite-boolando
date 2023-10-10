@@ -6,7 +6,7 @@ export default {
 
 <template>
   <header>
-    <div class="container">
+    <div class="container d-flex justify-content-beetween align-center h-100">
       <nav class="main-menu">
         <ul class="d-flex">
           <li><a href="#">uomo</a></li>
@@ -29,9 +29,53 @@ export default {
         </ul>
       </nav>
     </div>
-  </header>
+   </header>
 </template>
 
 <style>
+
+@use '../scss/partials/variabiles' as *;
+
+header{
+  position: fixed;
+  left: 0;
+  right: 0; /* al posto di dare with:100% */
+  background-color: #FA6903;
+  height: 80px;
+  color: white;
+  box-shadow: 0 1px 3px grey;
+  z-index: 999;
+
+  .container{
+    padding: 0 10px;
+    nav{
+      width: 30%;
+    }
+    nav ul{
+      list-style: none;
+    }
+    nav ul a{
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      text-transform: capitalize;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+    .main-menu a{
+      padding-right: 20px;
+    }
+    .social-menu a{
+      padding-left: 5px;
+    }
+    .logo{
+      width: 165px;
+    }
+  }
+  .logo{
+    width: 165px;
+  }
+}
 
 </style>
