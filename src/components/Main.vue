@@ -210,7 +210,7 @@ main{
         padding: 20px 15px;
         font-size: 1.5rem;
         &:hover{
-          color: $bg-red;
+          color: $red;
         }
       }
       .card-badge{
