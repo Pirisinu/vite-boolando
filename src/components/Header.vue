@@ -32,7 +32,7 @@ export default {
    </header>
 </template>
 
-<style>
+<style lang="scss" scoped>
 
 @use '../scss/partials/variabiles' as *;
 
@@ -40,7 +40,7 @@ header{
   position: fixed;
   left: 0;
   right: 0; /* al posto di dare with:100% */
-  background-color: #FA6903;
+  background-color: $bg-header;
   height: 80px;
   color: white;
   box-shadow: 0 1px 3px grey;
@@ -69,12 +69,12 @@ header{
     .social-menu a{
       padding-left: 5px;
     }
+    .social-menu ul{
+      justify-content: flex-end;
+    }
     .logo{
       width: 165px;
     }
-  }
-  .logo{
-    width: 165px;
   }
 }
 
