@@ -33,19 +33,5 @@ export default {
 </template>
 
 <style>
-  header{
-    position: fixed;
-    width: 100%;
-    background-color: #FA6903;
-    height: 80px;
-    color: white;
-    box-shadow: 0 1px 3px grey;
-    
-    div{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 100%;
-    }
-  }
+
 </style>
