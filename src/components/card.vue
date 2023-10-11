@@ -1,7 +1,13 @@
   
 <script>
+import products from '../data/products.js';
 export default {
-  name:'card'
+  name:'card',
+  data(){
+    return{
+      products
+    }
+  }
 }
 </script>
 
@@ -10,7 +16,7 @@ export default {
   <div class="card" >
     <div class="card-image">
       <div class="images">
-        <img src="/img/1.webp" alt="product.primaryImage">
+        <img :src="`/img/`" :alt="products.primaryImage">
         <img class="secondary-image" src="product.secondaryImage" alt="nome prodotto...">
       </div>
       <div class="favourite">&hearts;</div>
