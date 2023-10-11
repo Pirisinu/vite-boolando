@@ -62,7 +62,7 @@ export default [
     sostenibilita: false,
     marca: "Esprit",
     modello: 'MAGLIONE - BLACK',
-    fullPrice: 49.99,
+    fullPrice: null,
     lastPrice: 29.99,
   },
 ];

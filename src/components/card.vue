@@ -17,20 +17,20 @@ export default {
     <div class="card-image">
       <div class="images">
         <img :src="`/img/`+card.primaryImage" :alt="card.primaryImage">
-        <img class="secondary-image" :src="card.secondaryImage" alt="nome prodotto...">
+        <img :class="secondary-image" :src="card.secondaryImage" :alt="card.marca">
       </div>
       <div class="favourite">&hearts;</div>
       <div class="card-badge">
-        <span class="badge discount">{{}}</span>
-        <span v-if="true" class="badge tag">Sostenibilità</span>
+        <span v-if="card.discount" class="badge discount">{{card.discount}}</span>
+        <span v-if="card.sostenibilita" class="badge tag">Sostenibilità</span>
       </div>
     </div>
     <div class="card-text">
-      <span class="brand">{{  }}</span>
-      <h3 class="product-name">{{ }}</h3>
+      <span class="brand">{{ card.marca }}</span>
+      <h3 class="product-name">{{ card.modello }}</h3>
       <div class="price">
-        <span>{{  }}</span>
-        <del>{{ }}</del>
+        <span>{{ card.lastPrice }}</span>
+        <del>{{ card.fullPrice }}</del>
       </div>
     </div>
   </div> 
