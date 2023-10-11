@@ -21,7 +21,7 @@ export default {
           <div class="card" >
             <div class="card-image">
               <div class="images">
-                <img :src="product.primaryImage" alt="nome prodotto...">
+                <img :src="`../assets/img/` product.primaryImage" :alt="product.primaryImage">
                 <img class="secondary-image" :src="product.secondaryImage" alt="nome prodotto...">
               </div>
               <div class="favourite">&hearts;</div>
