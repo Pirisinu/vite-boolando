@@ -19,19 +19,17 @@ export default {
     <div class="container">
 
       <div class="row d-flex flex-wrap">
-        <div class="col">
 
-         <card/>
+         <card v-for="product in products" :key="product.id" :product="product"/>
          
           
-        </div>
       </div>
 
     </div>
    </main>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
   @use '../scss/partials/variabiles' as *;
 
 main{

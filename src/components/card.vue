@@ -3,6 +3,10 @@
 import products from '../data/products.js';
 export default {
   name:'card',
+  props:{
+    product: 'object',
+
+  },
   data(){
     return{
       products
@@ -12,34 +16,36 @@ export default {
 </script>
 
 <template>
-  <!-- card  -->
-  <div class="card" v-for="card in products" :key="card.id">
-    <div class="card-image">
-      <div class="images">
-        <img :src="`/img/`+card.primaryImage" :alt="card.primaryImage">
-        <img :class="secondary-image" :src="card.secondaryImage" :alt="card.marca">
+  <div class="col">
+    <!-- card  -->
+    <div class="card">
+      <div class="card-image">
+        <div class="images">
+          <img :src="`/img/`+product.primaryImage" :alt="product.primaryImage">
+          <img class="secondary-image" :src="`/img/`+product.secondaryImage" :alt="product.secondaryImage">
+        </div>
+        <div class="favourite">&hearts;</div>
+        <div class="card-badge">
+          <span v-if="product.discount" class="badge discount">{{product.discount}}</span>
+          <span v-if="product.sostenibilita" class="badge tag">Sostenibilità</span>
+        </div>
       </div>
-      <div class="favourite">&hearts;</div>
-      <div class="card-badge">
-        <span v-if="card.discount" class="badge discount">{{card.discount}}</span>
-        <span v-if="card.sostenibilita" class="badge tag">Sostenibilità</span>
+      <div class="card-text">
+        <span class="brand">{{ product.marca }}</span>
+        <h3 class="product-name">{{ product.modello }}</h3>
+        <div class="price">
+          <span>{{ product.lastPrice }}</span>
+          <del>{{ product.fullPrice }}</del>
+        </div>
       </div>
-    </div>
-    <div class="card-text">
-      <span class="brand">{{ card.marca }}</span>
-      <h3 class="product-name">{{ card.modello }}</h3>
-      <div class="price">
-        <span>{{ card.lastPrice }}</span>
-        <del>{{ card.fullPrice }}</del>
-      </div>
-    </div>
-  </div> 
-  <!-- /card  -->
+    </div> 
+    <!-- /card  -->
+  </div>
 </template>
 
-<style lang="scss" >
+<style lang="scss" scoped>
+@use '../scss/partials/variabiles' as *;
 
- @use '../scss/partials/variabiles' as *;
 
 .card .card-image{
       position: relative;
