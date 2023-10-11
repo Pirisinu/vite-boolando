@@ -17,7 +17,7 @@ export default {
 
       <div class="box-logo">
         <div class="logo">
-          <img src="img/boolean-logo.png" alt="Logo Boolean">
+          <img src="../assets/img/boolean-logo.png" alt="Logo Boolean">
         </div>
       </div>
       
